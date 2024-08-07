@@ -70,6 +70,8 @@ export function Chat({ id, className, session, missingKeys }: ChatProps) {
         <TickerTape />
       )}
 
+
+
       <div
         className={cn(
           messages.length ? 'pb-[200px] pt-4 md:pt-6' : 'pb-[200px] pt-0',
@@ -81,9 +83,12 @@ export function Chat({ id, className, session, missingKeys }: ChatProps) {
           <ChatList messages={messages} isShared={false} session={session} />
         ) : (
           <EmptyScreen />
+
         )}
         <div className="w-full h-px" ref={visibilityRef} />
       </div>
+
+
       <ChatPanel
         id={id}
         input={input}
